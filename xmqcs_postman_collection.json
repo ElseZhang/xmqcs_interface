@@ -280,13 +280,23 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/orders",
+					"raw": "{{endpoint}}/api/orders?status=going_on&page=1",
 					"host": [
 						"{{endpoint}}"
 					],
 					"path": [
 						"api",
 						"orders"
+					],
+					"query": [
+						{
+							"key": "status",
+							"value": "going_on"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						}
 					]
 				}
 			},
@@ -386,7 +396,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/reservation/create?order_id=29&time_slice_id=12&date=2020-09-27",
+					"raw": "{{endpoint}}/api/reservation/create?order_id=29&time_slice_id=12&date=2020-09-29&user_kid_id=5",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -406,7 +416,11 @@
 						},
 						{
 							"key": "date",
-							"value": "2020-09-27"
+							"value": "2020-09-29"
+						},
+						{
+							"key": "user_kid_id",
+							"value": "5"
 						}
 					]
 				}
