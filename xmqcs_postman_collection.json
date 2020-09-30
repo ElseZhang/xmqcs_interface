@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "636e9808-7bc4-409a-a252-c8d1cf4e3d30",
-		"name": "晓敏青春说",
+		"name": "2222222",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -103,7 +103,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/time_slices/all/course/7",
+					"raw": "{{endpoint}}/api/time_slices/all/course/8/expert/15?date=2020-09-30",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -112,7 +112,15 @@
 						"time_slices",
 						"all",
 						"course",
-						"7"
+						"8",
+						"expert",
+						"15"
+					],
+					"query": [
+						{
+							"key": "date",
+							"value": "2020-09-30"
+						}
 					]
 				}
 			},
@@ -421,6 +429,48 @@
 						{
 							"key": "user_kid_id",
 							"value": "5"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "重新支付订单",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/api/order/repay?id=11",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"order",
+						"repay"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "11"
 						}
 					]
 				}
