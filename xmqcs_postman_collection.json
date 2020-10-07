@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "636e9808-7bc4-409a-a252-c8d1cf4e3d30",
-		"name": "2222222",
+		"name": "晓敏青春说",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -88,6 +88,96 @@
 			"response": []
 		},
 		{
+			"name": "获取ACCESS_TOKEN",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "https://api.weixin.qq.com/cgi-bin/token?grant_type=client_credential&appid=wx05c3054b75f4d89f&secret=9c04840488c8ff58b488e2a9910b6730",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weixin",
+						"qq",
+						"com"
+					],
+					"path": [
+						"cgi-bin",
+						"token"
+					],
+					"query": [
+						{
+							"key": "grant_type",
+							"value": "client_credential"
+						},
+						{
+							"key": "appid",
+							"value": "wx05c3054b75f4d89f"
+						},
+						{
+							"key": "secret",
+							"value": "9c04840488c8ff58b488e2a9910b6730"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "发送订阅消息",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"touser\": \"ouCcu5BpAm-N27VjFqHkCz4tjzSk\",\n        \"template_id\": \"GhDJyMfoT7P6Rw2-V1HG6sS8li3tdaKG-fx7DgoI-8o\",\n        \"page\": \"pages/index/index\",\n        \"lang\":\"zh_CN\",\n        \"data\": {\n            \"date1\": {\n                \"value\": \"2020-10-06\"\n            },\n            \"time2\": {\n                \"value\": \"13:30\"\n            },\n            \"thing6\": {\n                \"value\": \"动力催眠\"\n            },\n            \"thing8\": {\n                \"value\": \"晓敏老师\"\n            },\n            \"thing5\": {\n                \"value\": \"动力催眠描述\"\n            }\n        }\n    }"
+				},
+				"url": {
+					"raw": "https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=37_IkKtr_ISW_prHi17c9Z5Sz6OAYur8kUpZ9zjXXlq8YqTT684Z1tGiuN9GfEz-NGGpUkiH0uouQx-E-zCEHxt8n9q4ENmjPexqEK6ZB1Ka892gZc7CFIFqojMUq7bFgory15TdHuF55SikOtHGLXiAFABGS",
+					"protocol": "https",
+					"host": [
+						"api",
+						"weixin",
+						"qq",
+						"com"
+					],
+					"path": [
+						"cgi-bin",
+						"message",
+						"subscribe",
+						"send"
+					],
+					"query": [
+						{
+							"key": "access_token",
+							"value": "37_IkKtr_ISW_prHi17c9Z5Sz6OAYur8kUpZ9zjXXlq8YqTT684Z1tGiuN9GfEz-NGGpUkiH0uouQx-E-zCEHxt8n9q4ENmjPexqEK6ZB1Ka892gZc7CFIFqojMUq7bFgory15TdHuF55SikOtHGLXiAFABGS"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "课程预约时间段",
 			"request": {
 				"auth": {
@@ -142,7 +232,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/experts/all/course/8",
+					"raw": "{{endpoint}}/api/experts/all/course/6",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -151,7 +241,7 @@
 						"experts",
 						"all",
 						"course",
-						"8"
+						"6"
 					]
 				}
 			},
@@ -173,7 +263,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/product/detail/course/8/expert/15",
+					"raw": "{{endpoint}}/api/product/detail/course/1/expert/1",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -182,9 +272,9 @@
 						"product",
 						"detail",
 						"course",
-						"8",
+						"1",
 						"expert",
-						"15"
+						"1"
 					]
 				}
 			},
@@ -242,7 +332,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/order/create?product_id=88&number=2",
+					"raw": "{{endpoint}}/api/order/create?product_id=93&number=2",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -254,7 +344,7 @@
 					"query": [
 						{
 							"key": "product_id",
-							"value": "88"
+							"value": "93"
 						},
 						{
 							"key": "number",
@@ -404,7 +494,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/reservation/create?order_id=29&time_slice_id=12&date=2020-09-29&user_kid_id=5",
+					"raw": "{{endpoint}}/api/reservation/create?order_id=32&date=2020-09-29&user_kid_id=5&start=09:00&end=10:00",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -416,11 +506,7 @@
 					"query": [
 						{
 							"key": "order_id",
-							"value": "29"
-						},
-						{
-							"key": "time_slice_id",
-							"value": "12"
+							"value": "32"
 						},
 						{
 							"key": "date",
@@ -429,6 +515,14 @@
 						{
 							"key": "user_kid_id",
 							"value": "5"
+						},
+						{
+							"key": "start",
+							"value": "09:00"
+						},
+						{
+							"key": "end",
+							"value": "10:00"
 						}
 					]
 				}
@@ -590,6 +684,41 @@
 						"api",
 						"users",
 						"stat"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "配置信息",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/api/configs",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"configs"
 					]
 				}
 			},
