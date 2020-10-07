@@ -178,6 +178,52 @@
 			"response": []
 		},
 		{
+			"name": "订阅记录",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{endpoint}}/api/subscriptions/create?template_id=GhDJyMfoT7P6Rw2-V1HG6iC0FJCBjO3c5GglakeDA4M",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"subscriptions",
+						"create"
+					],
+					"query": [
+						{
+							"key": "template_id",
+							"value": "GhDJyMfoT7P6Rw2-V1HG6iC0FJCBjO3c5GglakeDA4M"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "课程预约时间段",
 			"request": {
 				"auth": {
