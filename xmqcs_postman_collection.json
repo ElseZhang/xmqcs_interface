@@ -150,10 +150,10 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n        \"touser\": \"ouCcu5BpAm-N27VjFqHkCz4tjzSk\",\n        \"template_id\": \"GhDJyMfoT7P6Rw2-V1HG6sS8li3tdaKG-fx7DgoI-8o\",\n        \"page\": \"pages/index/index\",\n        \"lang\":\"zh_CN\",\n        \"data\": {\n            \"date1\": {\n                \"value\": \"2020-10-06\"\n            },\n            \"time2\": {\n                \"value\": \"13:30\"\n            },\n            \"thing6\": {\n                \"value\": \"动力催眠\"\n            },\n            \"thing8\": {\n                \"value\": \"晓敏老师\"\n            },\n            \"thing5\": {\n                \"value\": \"动力催眠描述\"\n            }\n        }\n    }"
+					"raw": "{\n        \"touser\": \"ouCcu5BpAm-N27VjFqHkCz4tjzSk\",\n        \"template_id\": \"GhDJyMfoT7P6Rw2-V1HG6iC0FJCBjO3c5GglakeDA4M\",\n        \"page\": \"pages/index/index\",\n        \"lang\":\"zh_CN\",\n        \"data\": {\n            \"thing6\": {\n                \"value\": \"3333333333\"\n            },\n            \"name8\": {\n                \"value\": \"张三\"\n            },\n            \"date1\": {\n                \"value\": \"2020-10-29\"\n            },\n            \"time2\": {\n                \"value\": \"12:30\"\n            },\n            \"thing9\": {\n                \"value\": \"动力催眠描述\"\n            }\n        }\n    }"
 				},
 				"url": {
-					"raw": "https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=37_IkKtr_ISW_prHi17c9Z5Sz6OAYur8kUpZ9zjXXlq8YqTT684Z1tGiuN9GfEz-NGGpUkiH0uouQx-E-zCEHxt8n9q4ENmjPexqEK6ZB1Ka892gZc7CFIFqojMUq7bFgory15TdHuF55SikOtHGLXiAFABGS",
+					"raw": "https://api.weixin.qq.com/cgi-bin/message/subscribe/send?access_token=38__l-LpJTAVVkB6orjWJQBYYh39Rtvx7yN-xoXdDWFgVXgVU2cv83i7fT6pNQJzRRgN20x0qXjforIozZD4NJUmS4rC2PYwSi4uWsW-QabtY9FqwgaJWN2Hla5aD8eRsYG0c9i6XHI_oWQFl2IFDWiADASQJ",
 					"protocol": "https",
 					"host": [
 						"api",
@@ -170,7 +170,7 @@
 					"query": [
 						{
 							"key": "access_token",
-							"value": "37_IkKtr_ISW_prHi17c9Z5Sz6OAYur8kUpZ9zjXXlq8YqTT684Z1tGiuN9GfEz-NGGpUkiH0uouQx-E-zCEHxt8n9q4ENmjPexqEK6ZB1Ka892gZc7CFIFqojMUq7bFgory15TdHuF55SikOtHGLXiAFABGS"
+							"value": "38__l-LpJTAVVkB6orjWJQBYYh39Rtvx7yN-xoXdDWFgVXgVU2cv83i7fT6pNQJzRRgN20x0qXjforIozZD4NJUmS4rC2PYwSi4uWsW-QabtY9FqwgaJWN2Hla5aD8eRsYG0c9i6XHI_oWQFl2IFDWiADASQJ"
 						}
 					]
 				}
@@ -640,7 +640,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/users/update?name=张小明&phone=18958109230",
+					"raw": "{{endpoint}}/api/users/update?name=张小明&phone=18958109230&city=丽水",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -657,6 +657,10 @@
 						{
 							"key": "phone",
 							"value": "18958109230"
+						},
+						{
+							"key": "city",
+							"value": "丽水"
 						}
 					]
 				}
@@ -694,6 +698,42 @@
 						"api",
 						"users",
 						"kids"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "获取用户信息",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "{{token}}",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"url": {
+					"raw": "{{endpoint}}/api/user/info",
+					"host": [
+						"{{endpoint}}"
+					],
+					"path": [
+						"api",
+						"user",
+						"info"
 					]
 				}
 			},
