@@ -278,7 +278,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/experts/all/course/6",
+					"raw": "{{endpoint}}/api/experts/all/course/8",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -287,7 +287,7 @@
 						"experts",
 						"all",
 						"course",
-						"6"
+						"8"
 					]
 				}
 			},
@@ -309,7 +309,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/product/detail/course/1/expert/1",
+					"raw": "{{endpoint}}/api/product/detail/course/3/expert/1",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -318,7 +318,7 @@
 						"product",
 						"detail",
 						"course",
-						"1",
+						"3",
 						"expert",
 						"1"
 					]
@@ -378,7 +378,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/order/create?product_id=93&number=2",
+					"raw": "{{endpoint}}/api/order/create?product_sku_id=362&number=2",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -389,8 +389,8 @@
 					],
 					"query": [
 						{
-							"key": "product_id",
-							"value": "93"
+							"key": "product_sku_id",
+							"value": "362"
 						},
 						{
 							"key": "number",
@@ -654,57 +654,7 @@
 			"response": []
 		},
 		{
-			"name": "更新用户信息",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "PUT",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{endpoint}}/api/users/update?name=张小明&phone=18958109230&city=丽水",
-					"host": [
-						"{{endpoint}}"
-					],
-					"path": [
-						"api",
-						"users",
-						"update"
-					],
-					"query": [
-						{
-							"key": "name",
-							"value": "张小明"
-						},
-						{
-							"key": "phone",
-							"value": "18958109230"
-						},
-						{
-							"key": "city",
-							"value": "丽水"
-						}
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "获取用户所有子女信息",
+			"name": "获取用户所有家庭成员信息",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -734,42 +684,6 @@
 						"api",
 						"users",
 						"kids"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "获取用户信息",
-			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "{{token}}",
-							"type": "string"
-						}
-					]
-				},
-				"method": "GET",
-				"header": [
-					{
-						"key": "Content-Type",
-						"name": "Content-Type",
-						"type": "text",
-						"value": "application/json"
-					}
-				],
-				"url": {
-					"raw": "{{endpoint}}/api/user/info",
-					"host": [
-						"{{endpoint}}"
-					],
-					"path": [
-						"api",
-						"user",
-						"info"
 					]
 				}
 			},
@@ -847,7 +761,7 @@
 			"response": []
 		},
 		{
-			"name": "新增用户孩子的信息",
+			"name": "新增家庭成员的信息",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -869,7 +783,7 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/user_kids/create?name=张一非&birthday=1285862400&relationship=2&remark=33333333333333&grade=四年级",
+					"raw": "{{endpoint}}/api/user_kids/create?name=张一非&birthday=1285862400&relationship=2&remark=33333333333333&phone=18958109230&city=杭州",
 					"host": [
 						"{{endpoint}}"
 					],
@@ -896,8 +810,12 @@
 							"value": "33333333333333"
 						},
 						{
-							"key": "grade",
-							"value": "四年级"
+							"key": "phone",
+							"value": "18958109230"
+						},
+						{
+							"key": "city",
+							"value": "杭州"
 						}
 					]
 				}
@@ -905,7 +823,7 @@
 			"response": []
 		},
 		{
-			"name": "更新用户子女信息",
+			"name": "更新家庭成员信息",
 			"request": {
 				"auth": {
 					"type": "bearer",
@@ -927,14 +845,14 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/user_kids/3?name=张一杭&birthday=1285862400&relationship=2&remark=4444444444444&grade=高一",
+					"raw": "{{endpoint}}/api/user_kids/22?name=张一杭&birthday=1285862400&relationship=2&remark=4444444444444&phone=18958109230&city=丽水",
 					"host": [
 						"{{endpoint}}"
 					],
 					"path": [
 						"api",
 						"user_kids",
-						"3"
+						"22"
 					],
 					"query": [
 						{
@@ -954,8 +872,12 @@
 							"value": "4444444444444"
 						},
 						{
-							"key": "grade",
-							"value": "高一"
+							"key": "phone",
+							"value": "18958109230"
+						},
+						{
+							"key": "city",
+							"value": "丽水"
 						}
 					]
 				}
@@ -985,14 +907,14 @@
 					}
 				],
 				"url": {
-					"raw": "{{endpoint}}/api/user_kids/5",
+					"raw": "{{endpoint}}/api/user_kids/22",
 					"host": [
 						"{{endpoint}}"
 					],
 					"path": [
 						"api",
 						"user_kids",
-						"5"
+						"22"
 					]
 				}
 			},
